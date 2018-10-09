@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="animal_IA">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="culture"/>
+    <schema id="4" parent="1" name="farmDev"/>
+    <schema id="5" parent="1" name="giftCard"/>
+    <schema id="6" parent="1" name="industry"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="mysql"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="robert"/>
+    <schema id="11" parent="1" name="sys"/>
+    <schema id="12" parent="1" name="yunlian"/>
+    <table id="13" parent="2" name="Ani_House_Info"/>
+    <table id="14" parent="2" name="Ani_Sale"/>
+    <table id="15" parent="2" name="Common_Cost"/>
+    <table id="16" parent="2" name="Daily_Cost"/>
+    <table id="17" parent="2" name="Daily_Death_Rate"/>
+    <table id="18" parent="2" name="Daily_Egg_Rate"/>
+    <table id="19" parent="2" name="Daily_Input_Type"/>
+    <table id="20" parent="2" name="Daily_Purchase"/>
+    <table id="21" parent="2" name="Device_Repair"/>
+    <table id="22" parent="2" name="Fix_Cost_Type"/>
+    <table id="23" parent="2" name="Patrol"/>
+    <table id="24" parent="2" name="RentAndLabourCost"/>
+    <table id="25" parent="2" name="Seedling_Cost"/>
+    <table id="26" parent="2" name="user"/>
+    <column id="27" parent="13" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="13" name="Name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="13" name="Length">
+      <Position>3</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="30" parent="13" name="Height">
+      <Position>4</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="31" parent="13" name="Width">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="32" parent="13" name="Area">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="33" parent="13" name="Province">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="34" parent="13" name="City">
+      <Position>8</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="35" parent="13" name="Country">
+      <Position>9</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="36" parent="13" name="Street">
+      <Position>10</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="37" parent="13" name="Longitude">
+      <Position>11</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="38" parent="13" name="Latitude">
+      <Position>12</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="39" parent="13" name="ManagerName">
+      <Position>13</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="40" parent="13" name="Tel">
+      <Position>14</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="41" parent="13" name="CompanyName">
+      <Position>15</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="Email">
+      <Position>16</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="43" parent="13" name="LoginUserName">
+      <Position>17</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="LoginUserId">
+      <Position>18</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="CreateTime">
+      <Position>19</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="46" parent="13" name="UpdateTime">
+      <Position>20</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="47" parent="13" name="LoginUserId">
+      <ColNames>LoginUserId</ColNames>
+    </index>
+    <key id="48" parent="13" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="13" name="Ani_House_Info_ibfk_1">
+      <ColNames>LoginUserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="50" parent="14" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="51" parent="14" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="52" parent="14" name="AniHouseId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="53" parent="14" name="Name">
+      <Position>4</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="54" parent="14" name="Weigth">
+      <Position>5</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="55" parent="14" name="Count">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="56" parent="14" name="Unit">
+      <Position>7</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="57" parent="14" name="UnitPrice">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="58" parent="14" name="TotalPrice">
+      <Position>9</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="59" parent="14" name="PurchaseCompany">
+      <Position>10</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="60" parent="14" name="Contacts">
+      <Position>11</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="61" parent="14" name="Tel">
+      <Position>12</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="62" parent="14" name="Distance">
+      <Position>13</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="63" parent="14" name="Remark">
+      <Position>14</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="64" parent="14" name="Status">
+      <Position>15</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="65" parent="14" name="SaleTime">
+      <Position>16</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="66" parent="14" name="SysTime">
+      <Position>17</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="67" parent="14" name="AniHouseId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="68" parent="14" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="69" parent="14" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="70" parent="14" name="Ani_Sale_ibfk_1">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="71" parent="14" name="Ani_Sale_ibfk_2">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="72" parent="15" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="73" parent="15" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="74" parent="15" name="AniHouseId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="75" parent="15" name="Name">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="76" parent="15" name="UnitPrice">
+      <Position>5</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="77" parent="15" name="Quantity">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="78" parent="15" name="Unit">
+      <Position>7</Position>
+      <DataType>varchar(8)|0</DataType>
+    </column>
+    <column id="79" parent="15" name="TotalPrice">
+      <Position>8</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="80" parent="15" name="AniHousePrice">
+      <Position>9</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="81" parent="15" name="Status">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="82" parent="15" name="SysTime">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="83" parent="15" name="FixCostType">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="84" parent="15" name="Common_Cost_ibfk_2_idx">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="85" parent="15" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="86" parent="15" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="87" parent="15" name="Common_Cost_ibfk_1">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="88" parent="15" name="Common_Cost_ibfk_2">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnUpdate>no-action</OnUpdate>
+      <OnDelete>no-action</OnDelete>
+    </foreign-key>
+    <column id="89" parent="16" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="90" parent="16" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="91" parent="16" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="92" parent="16" name="DailyInputType">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="93" parent="16" name="AniHouseId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="94" parent="16" name="ThrowCount">
+      <Position>6</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="95" parent="16" name="Unit">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="96" parent="16" name="TotalPrice">
+      <Position>8</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="97" parent="16" name="ImageUrl">
+      <Position>9</Position>
+      <DataType>varchar(1024)|0</DataType>
+    </column>
+    <column id="98" parent="16" name="ThrowTime">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="99" parent="16" name="SysTime">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="100" parent="16" name="Status">
+      <Position>12</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <index id="101" parent="16" name="DailyInputType">
+      <ColNames>DailyInputType</ColNames>
+    </index>
+    <index id="102" parent="16" name="PondId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="103" parent="16" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="104" parent="16" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="105" parent="16" name="Daily_Cost_ibfk_3">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="106" parent="16" name="Daily_Cost_ibfk_1">
+      <ColNames>DailyInputType</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Daily_Input_Type</RefTableName>
+      <RefColNames>InputType</RefColNames>
+    </foreign-key>
+    <foreign-key id="107" parent="16" name="Daily_Cost_ibfk_2">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="108" parent="17" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="109" parent="17" name="AniHouseId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="110" parent="17" name="UserId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="111" parent="17" name="DailyDeathNum">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="112" parent="17" name="LivingNum">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="113" parent="17" name="DailyDeathRate">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="114" parent="17" name="Remark">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="115" parent="17" name="Date">
+      <Position>8</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="116" parent="17" name="AniHouseId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="117" parent="17" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="118" parent="17" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="119" parent="17" name="Daily_Death_Rate_ibfk_1">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <foreign-key id="120" parent="17" name="Daily_Death_Rate_ibfk_2">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="121" parent="18" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="122" parent="18" name="AniHouseId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="123" parent="18" name="UserId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="124" parent="18" name="DailyEggNum">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="125" parent="18" name="LivingNum">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="126" parent="18" name="DailyEggRate">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="127" parent="18" name="Remark">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="128" parent="18" name="Date">
+      <Position>8</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="129" parent="18" name="AniHouseId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="130" parent="18" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="131" parent="18" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="132" parent="18" name="Daily_Egg_Rate_ibfk_1">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <foreign-key id="133" parent="18" name="Daily_Egg_Rate_ibfk_2">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="134" parent="19" name="InputType">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="135" parent="19" name="InputTypeName">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="136" parent="19" name="PRIMARY">
+      <ColNames>InputType</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="137" parent="20" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="138" parent="20" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="139" parent="20" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="140" parent="20" name="DailyInputType">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="141" parent="20" name="ProductNum">
+      <Position>5</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="142" parent="20" name="TotalCount">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="143" parent="20" name="RemainCount">
+      <Position>7</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="144" parent="20" name="Unit">
+      <Position>8</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="145" parent="20" name="TotalPrice">
+      <Position>9</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="146" parent="20" name="UnitPrice">
+      <Position>10</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="147" parent="20" name="ImageUrl">
+      <Position>11</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="148" parent="20" name="PurchaseTime">
+      <Position>12</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="149" parent="20" name="SysTime">
+      <Position>13</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="150" parent="20" name="DailyInputType">
+      <ColNames>DailyInputType</ColNames>
+    </index>
+    <index id="151" parent="20" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="152" parent="20" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="153" parent="20" name="Daily_Purchase_ibfk_2">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="154" parent="20" name="Daily_Purchase_ibfk_1">
+      <ColNames>DailyInputType</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Daily_Input_Type</RefTableName>
+      <RefColNames>InputType</RefColNames>
+    </foreign-key>
+    <column id="155" parent="21" name="Id">
+      <Position>1</Position>
+      <Comment>alter Device_Repair id AUTO_INCREMENT=1000;
+</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="156" parent="21" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="157" parent="21" name="FixCostType">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="158" parent="21" name="AniHouseId">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="159" parent="21" name="Name">
+      <Position>5</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="160" parent="21" name="TotalPrice">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="161" parent="21" name="RepairPersonName">
+      <Position>7</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="162" parent="21" name="RepairTel">
+      <Position>8</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="163" parent="21" name="Remark">
+      <Position>9</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="164" parent="21" name="Status">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="165" parent="21" name="SysTime">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="166" parent="21" name="AniHouseId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="167" parent="21" name="FixCostType">
+      <ColNames>FixCostType</ColNames>
+    </index>
+    <index id="168" parent="21" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="169" parent="21" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="170" parent="21" name="Device_Repair_ibfk_1">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="171" parent="21" name="Device_Repair_ibfk_2">
+      <ColNames>FixCostType</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Fix_Cost_Type</RefTableName>
+      <RefColNames>CostType</RefColNames>
+    </foreign-key>
+    <foreign-key id="172" parent="21" name="Device_Repair_ibfk_3">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="173" parent="22" name="CostType">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="174" parent="22" name="TypeName">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="175" parent="22" name="PRIMARY">
+      <ColNames>CostType</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="176" parent="23" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="177" parent="23" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="178" parent="23" name="AniHouseId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="179" parent="23" name="PatrolContent">
+      <Position>4</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="180" parent="23" name="PatrolStatus">
+      <Position>5</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="181" parent="23" name="PatrolValue">
+      <Position>6</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="182" parent="23" name="Comment">
+      <Position>7</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="183" parent="23" name="ImageUrl">
+      <Position>8</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="184" parent="23" name="PatrolTime">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="185" parent="23" name="SysTime">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="186" parent="23" name="AniHouseId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="187" parent="23" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="188" parent="23" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="189" parent="23" name="Patrol_ibfk_1">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="190" parent="23" name="Patrol_ibfk_2">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="191" parent="24" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="192" parent="24" name="FixCostType">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="193" parent="24" name="UserId">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="194" parent="24" name="Name">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="195" parent="24" name="AniHouseId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="196" parent="24" name="Count">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="197" parent="24" name="Unit">
+      <Position>7</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="198" parent="24" name="UnitPrice">
+      <Position>8</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="199" parent="24" name="TotalPrice">
+      <Position>9</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="200" parent="24" name="Status">
+      <Position>10</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <column id="201" parent="24" name="SysTime">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="202" parent="24" name="FixCostType">
+      <ColNames>FixCostType</ColNames>
+    </index>
+    <index id="203" parent="24" name="PondId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="204" parent="24" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="205" parent="24" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="206" parent="24" name="RentAndLabourCost_ibfk_1">
+      <ColNames>FixCostType</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Fix_Cost_Type</RefTableName>
+      <RefColNames>CostType</RefColNames>
+    </foreign-key>
+    <foreign-key id="207" parent="24" name="RentAndLabourCost_ibfk_3">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="208" parent="24" name="RentAndLabourCost_ibfk_2">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="209" parent="25" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="210" parent="25" name="UserId">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="211" parent="25" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="212" parent="25" name="FixCostType">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="213" parent="25" name="AniHouseId">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="214" parent="25" name="Count">
+      <Position>6</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="215" parent="25" name="Unit">
+      <Position>7</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="216" parent="25" name="UnitPrice">
+      <Position>8</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="217" parent="25" name="TotalPrice">
+      <Position>9</Position>
+      <DataType>float|0</DataType>
+    </column>
+    <column id="218" parent="25" name="SysTime">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="219" parent="25" name="Status">
+      <Position>11</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <index id="220" parent="25" name="FixCostType">
+      <ColNames>FixCostType</ColNames>
+    </index>
+    <index id="221" parent="25" name="PondId">
+      <ColNames>AniHouseId</ColNames>
+    </index>
+    <index id="222" parent="25" name="UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="223" parent="25" name="PRIMARY">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="224" parent="25" name="Seedling_Cost_ibfk_3">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="225" parent="25" name="Seedling_Cost_ibfk_1">
+      <ColNames>FixCostType</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Fix_Cost_Type</RefTableName>
+      <RefColNames>CostType</RefColNames>
+    </foreign-key>
+    <foreign-key id="226" parent="25" name="Seedling_Cost_ibfk_2">
+      <ColNames>AniHouseId</ColNames>
+      <RefSchemaName>animal_IA</RefSchemaName>
+      <RefTableName>Ani_House_Info</RefTableName>
+      <RefColNames>Id</RefColNames>
+    </foreign-key>
+    <column id="227" parent="26" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="228" parent="26" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="229" parent="26" name="password">
+      <Position>3</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="230" parent="26" name="person_name">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="231" parent="26" name="power">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="232" parent="26" name="tel">
+      <Position>6</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <column id="233" parent="26" name="email">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="234" parent="26" name="enterprise_name">
+      <Position>8</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="235" parent="26" name="category">
+      <Position>9</Position>
+      <DataType>varchar(128)|0</DataType>
+    </column>
+    <column id="236" parent="26" name="professional">
+      <Position>10</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="237" parent="26" name="job">
+      <Position>11</Position>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="238" parent="26" name="description">
+      <Position>12</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="239" parent="26" name="head_img">
+      <Position>13</Position>
+      <DataType>varchar(528)|0</DataType>
+    </column>
+    <column id="240" parent="26" name="create_time">
+      <Position>14</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="241" parent="26" name="login_time">
+      <Position>15</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="242" parent="26" name="last_login_time">
+      <Position>16</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="243" parent="26" name="count">
+      <Position>17</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="244" parent="26" name="user_name">
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="245" parent="26" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="246" parent="26" name="user_name">
+      <ColNames>user_name</ColNames>
+      <UnderlyingIndexName>user_name</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
